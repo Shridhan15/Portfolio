@@ -1,0 +1,39 @@
+/* Import Tailwind */
+@import "tailwindcss";
+
+/* Configure Fonts & Theme */
+@theme {
+  /* This matches the 'font-sans' utility */
+  --font-sans: "Inter", sans-serif;
+
+  /* This creates the 'font-space-grotesk' utility used in the Hero section */
+  --font-space-grotesk: "Space Grotesk", sans-serif;
+}
+
+/* Enable Class-based Dark Mode */
+/* This tells Tailwind to apply dark styles when the "dark" class is on the body/html */
+@variant dark (&:where(.dark, .dark *));
+
+/* Basic Reset */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply antialiased;
+  }
+}
+
+@keyframes bounce-slow {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+.animate-bounce-slow {
+  animation: bounce-slow 3s ease-in-out infinite;
+}
