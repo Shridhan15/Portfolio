@@ -1,5 +1,6 @@
 import React from "react";
-import { Eye, Download, Github, Code2 } from "lucide-react";
+import { Eye, Download, Github, Code2, Linkedin } from "lucide-react";
+import { certificates_images } from "../assets/assets";
 
 const Hero = () => (
   <section
@@ -64,7 +65,7 @@ const Hero = () => (
         <div className="flex flex-col sm:flex-row gap-4 pt-4">
           <div className="inline-flex rounded-xl overflow-hidden shadow-xl shadow-cyan-500/20 dark:shadow-cyan-500/20 transform transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-cyan-500/30 dark:hover:shadow-cyan-500/40">
             <a
-              href="/resume.pdf"
+              href={certificates_images.resume}
               target="_blank"
               className="bg-gradient-to-r from-cyan-600 to-purple-600 dark:from-cyan-600 dark:to-blue-600 text-white px-6 py-3.5 font-medium flex items-center gap-2 hover:from-cyan-500 hover:to-purple-500 dark:hover:from-cyan-500 dark:hover:to-blue-500 transition-colors flex-1 justify-center sm:flex-none"
             >
@@ -74,7 +75,7 @@ const Hero = () => (
             <div className="w-[1px] bg-white/20"></div>
 
             <a
-              href="/resume.pdf"
+              href={certificates_images.resume}
               download
               className="bg-purple-600 dark:bg-blue-600 text-white px-5 py-3.5 flex items-center justify-center hover:bg-purple-500 dark:hover:bg-blue-500 transition-colors"
               aria-label="Download Resume"
@@ -86,7 +87,8 @@ const Hero = () => (
 
           <div className="flex gap-4 sm:ml-4 justify-start">
             <a
-              href="#"
+              href="https://github.com/Shridhan15"
+              target="_blank"
               className="p-3.5 rounded-xl border border-stone-200 dark:border-slate-700 bg-white dark:bg-slate-800/50 text-stone-500 dark:text-slate-300 hover:bg-stone-50 dark:hover:bg-slate-800 hover:border-[#0077b5] group transition-all duration-300 shadow-sm"
               aria-label="GitHub"
             >
@@ -97,19 +99,20 @@ const Hero = () => (
             </a>
 
             <a
-              href="#"
+              href="https://www.linkedin.com/in/shridhan-suman-3970a3293/"
+              target="_blank"
               className="p-3.5 rounded-xl border border-stone-200 dark:border-slate-700 bg-white dark:bg-slate-800/50 text-[#0077b5] hover:bg-stone-50 dark:hover:bg-slate-800 hover:border-[#0077b5] hover:shadow-[0_0_15px_rgba(0,119,181,0.3)] transition-all duration-300 shadow-sm"
               aria-label="LinkedIn"
             >
-              <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg"
-                className="w-6 h-6"
-                alt="LinkedIn"
+              <Linkedin
+                size={24}
+                className="group-hover:text-black dark:group-hover:text-white transition-colors"
               />
             </a>
 
             <a
-              href="mailto:shri@example.com"
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=shridhan.suman@gmail.com"
+              target="_blank"
               className="p-3.5 rounded-xl border border-stone-200 dark:border-slate-700 bg-white dark:bg-slate-800/50 text-[#EA4335] hover:bg-stone-50 dark:hover:bg-slate-800 hover:border-[#EA4335] hover:shadow-[0_0_15px_rgba(234,67,53,0.3)] transition-all duration-300 shadow-sm"
               aria-label="Email"
             >

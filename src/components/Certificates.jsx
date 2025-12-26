@@ -1,38 +1,69 @@
 import React from "react";
+import { certificates_images } from "../assets/assets";
 
 const CERTIFICATES = [
   {
-    title: "The Complete Full-Stack Web Development Bootcamp",
-    issuer: "Udemy",
-    issueDate: "June 2025",
-    certId: "UC-ac142...",
+    title:
+      "Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate",
+    issuer: "Oracle University",
+    issueDate: "November 2025",
+    certId: "103074793OCI25AICFA",
     description:
-      "Comprehensive training in modern web development technologies including HTML5, CSS3, ES6+, Node.js, and React.",
-    skills: ["HTML5", "CSS3", "JavaScript", "Node.js", "Express"],
-    image: "/api/placeholder/600/350",
-    verifyLink: "#",
+      "Certification focused on foundational concepts of AI and GenAI, covering machine learning principles, deep learning architectures, large language models, and Oracle Cloud Infrastructure AI services. The program emphasizes understanding AI workflows and applying OCI AI, ML, and Generative AI services in real-world cloud environments.",
+    skills: [
+      "Artificial Intelligence Fundamentals",
+      "Generative AI",
+      "Machine Learning",
+      "Supervised Learning",
+      "OCI",
+      "OCI AI Services",
+      "Oracle 23AI",
+      "Select AI",
+    ],
+    image: certificates_images.oracleCert,
+    verifyLink:
+      "https://catalog-education.oracle.com/ords/certview/sharebadge?id=7312D02291904CFD13E6F4256CB6EBFE4CCD0BCFB4C89ACAA77FAEAEA1E661E9",
   },
   {
-    title: "DevOps Fundamentals",
-    issuer: "IBM",
-    issueDate: "July 2025",
-    certId: "2baa01c9...",
+    title: "Full Stack Web Development",
+    issuer: "Simplilearn",
+    issueDate: "September 2025",
+    certId: "8935620",
     description:
-      "Foundational training in cloud application development including cloud native fundamentals, DevOps practices, and IBM Cloud.",
-    skills: ["Cloud Computing", "DevOps", "IBM Cloud", "Node.js"],
-    image: "/api/placeholder/600/350",
-    verifyLink: "#",
+      "Comprehensive full stack development certification covering frontend frameworks, backend development, databases, and cloud-ready application design. The program focused on building scalable, secure, and production-ready web applications using modern technologies.",
+    skills: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "React",
+      "Node.js",
+      "Express.js",
+      "REST APIs",
+      "MongoDB",
+      "SQL",
+      "Cloud Fundamentals",
+    ],
+    image: certificates_images.simplilearnCert,
+    verifyLink: "https://lnkd.in/geuF_53d",
   },
   {
-    title: "DevOps, Agile & Design Thinking",
-    issuer: "IBM",
-    issueDate: "July 2025",
-    certId: "9dad803f...",
+    title: "React (Frontend Developer) Skills Test",
+    issuer: "HackerRank",
+    issueDate: "August 2025",
+    certId: "44F28E1A14E8",
     description:
-      "Training focused on modern software development methodologies, including DevOps practices, Agile workflows, and team collaboration.",
-    skills: ["DevOps", "Agile", "Design Thinking", "Software Dev"],
-    image: "/api/placeholder/600/350",
-    verifyLink: "#",
+      "Successfully cleared the HackerRank React (Frontend Developer) Skills Test, validating hands-on knowledge of React fundamentals, modern JavaScript, component-based architecture, hooks, state management, and frontend problem-solving best practices.",
+    skills: [
+      "React.js",
+      "Components",
+      "Hooks",
+      "State Management",
+      "JavaScript",
+      "Frontend Problem Solving",
+      "Best Practices",
+    ],
+    image: certificates_images.hackerrankCert,
+    verifyLink: "https://www.hackerrank.com/certificates/44f28e1a14e8",
   },
 ];
 
@@ -59,9 +90,20 @@ const Certificates = ({ isDark }) => (
             {/* Top Image Section */}
             <div className="h-48 bg-stone-100 dark:bg-slate-800 relative overflow-hidden group">
               <div className="absolute inset-0 bg-gradient-to-t from-white/50 dark:from-slate-100 dark:from-slate-900 to-transparent z-10"></div>
-              <div className="w-full h-full flex items-center justify-center bg-stone-100/50 dark:bg-slate-800">
-                <FileText className="text-stone-400 dark:text-slate-600 w-16 h-16 group-hover:text-purple-500 dark:group-hover:text-cyan-500/50 transition-colors duration-500" />
+              <div className="w-full h-full relative">
+                {cert.image ? (
+                  <img
+                    src={cert.image}
+                    alt={cert.title}
+                    className="w-full h-full object-cover"
+                  />
+                ) : (
+                  <div className="w-full h-full flex items-center justify-center bg-stone-100/50 dark:bg-slate-800">
+                    <FileText className="text-stone-400 dark:text-slate-600 w-16 h-16" />
+                  </div>
+                )}
               </div>
+
               {/* Certification Logo Badge Overlay */}
               <div className="absolute -bottom-4 left-6 z-20 bg-white dark:bg-slate-800 p-2 rounded-xl border border-stone-200 dark:border-slate-700 shadow-lg">
                 <Award className="text-purple-600 dark:text-cyan-400 w-8 h-8" />
