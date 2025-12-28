@@ -2,6 +2,31 @@ import React from "react";
 import { Github, Linkedin, Mail, Send } from "lucide-react";
 import WhatsAppIcon from "./WhatsAppIcon";
 import FloatingLabelInput from "./FloatingLabelInput";
+import emailjs from "@emailjs/browser";
+
+
+const sendEmail = (e) => {
+  e.preventDefault();
+  // console.log("Service id:", import.meta.env.VITE_EMAILJS_SERVICE_ID);  
+  // console.log("Template id:", import.meta.env.VITE_EMAILJS_TEMPLATE_ID);  
+  // console.log("Public key:", import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
+
+  emailjs
+    .sendForm(
+      import.meta.env.VITE_EMAILJS_SERVICE_ID,
+      import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+      e.target,
+      import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+    )
+    .then(() => {
+      alert("Message sent successfully");
+      e.target.reset();
+    })
+    .catch((error) => {
+      console.error(error);
+      alert("Failed to send message");
+    });
+};
 
 const Contact = () => (
   <section
@@ -57,7 +82,7 @@ const Contact = () => (
         </div>
       </div>
 
-      <form  className="space-y-2 p-8 rounded-3xl bg-stone-50/80 dark:bg-slate-800/30 backdrop-blur-sm border border-stone-200 dark:border-slate-700">
+      <form onSubmit={sendEmail} className="space-y-2 p-8 rounded-3xl bg-stone-50/80 dark:bg-slate-800/30 backdrop-blur-sm border border-stone-200 dark:border-slate-700">
         <FloatingLabelInput type="text" id="name" name="name"  required placeholder="Name" />
         <FloatingLabelInput
           type="email"
