@@ -39,7 +39,7 @@ const Contact = () => (
       <div>
         <h2 className="text-4xl md:text-5xl font-bold text-stone-900 dark:text-white mb-6 font-space-grotesk">
           Let's Build <br />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-purple-600 dark:from-cyan-400 dark:to-purple-500">
+          <span className="text-transparent bg-clip-text bg-linear-to-r from-cyan-600 to-purple-600 dark:from-cyan-400 dark:to-purple-500">
             Something Future-Proof
           </span>
         </h2>
@@ -104,13 +104,13 @@ const Contact = () => (
           />
           <label
             htmlFor="message"
-            className="peer-focus:font-medium absolute text-sm text-stone-500 dark:text-slate-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-cyan-600 dark:peer-focus:text-cyan-400 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:top-3.5 peer-focus:scale-75 peer-focus:-translate-y-6"
+            className="peer-focus:font-medium absolute text-sm text-stone-500 dark:text-slate-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-left peer-focus:left-0 peer-focus:text-cyan-600 dark:peer-focus:text-cyan-400 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:top-3.5 peer-focus:scale-75 peer-focus:-translate-y-6"
           >
             Message
           </label>
         </div>
 
-        <button type="submit" className="w-full cursor-pointer py-4 rounded-xl bg-gradient-to-r from-cyan-600 to-purple-600 dark:from-cyan-600 dark:to-purple-600 text-white font-bold text-lg shadow-lg shadow-cyan-500/20 dark:shadow-cyan-900/20 hover:shadow-cyan-500/40 dark:hover:shadow-cyan-500/40 hover:scale-[1.02] transition-all duration-300 flex justify-center items-center gap-2">
+        <button type="submit" className="w-full cursor-pointer py-4 rounded-xl bg-linear-to-r from-cyan-600 to-purple-600 dark:from-cyan-600 dark:to-purple-600 text-white font-bold text-lg shadow-lg shadow-cyan-500/20 dark:shadow-cyan-900/20 hover:shadow-cyan-500/40 dark:hover:shadow-cyan-500/40 hover:scale-[1.02] transition-all duration-300 flex justify-center items-center gap-2">
           Send Message <Send size={18} />
         </button>
       </form>
