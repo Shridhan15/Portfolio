@@ -7,6 +7,7 @@ import Certificates from "./components/Certificates";
 import Education from "./components/Education";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import ChatWidget from "./components/ChatWidget";
 
 const App = () => {
   const [isDark, setIsDark] = useState(false);
@@ -43,6 +44,7 @@ const App = () => {
       <Education isDark={isDark} />
       <Contact isDark={isDark} />
       <Footer />
+      <ChatWidget />
     </>
   );
 };
