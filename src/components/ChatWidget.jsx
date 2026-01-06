@@ -49,6 +49,8 @@ export default function ChatWidget() {
       // Initialize assistant message
       setMessages((prev) => [...prev, { role: "assistant", content: "" }]);
 
+      // ... inside sendMessage after setLoading(false) and setIsStreaming(true)
+
       let currentAssistantContent = "";
 
       while (true) {
@@ -56,13 +58,22 @@ export default function ChatWidget() {
         if (done) break;
 
         const chunk = decoder.decode(value, { stream: true });
-        currentAssistantContent += chunk;
 
-        setMessages((prev) => {
-          const newMessages = [...prev];
-          newMessages[newMessages.length - 1].content = currentAssistantContent;
-          return newMessages;
-        });
+        // Loop through each character in the chunk to simulate typing
+        for (const char of chunk) {
+          currentAssistantContent += char;
+
+          setMessages((prev) => {
+            const newMessages = [...prev];
+            // Update the last message (the assistant's reply)
+            newMessages[newMessages.length - 1].content =
+              currentAssistantContent;
+            return newMessages;
+          });
+
+          // Delay for each character (15ms - 30ms feels most natural)
+          await new Promise((resolve) => setTimeout(resolve, 20));
+        }
       }
     } catch (error) {
       console.error("Chat Error:", error);
@@ -103,7 +114,7 @@ export default function ChatWidget() {
               </div>
               <button
                 onClick={() => setIsOpen(false)}
-                className="p-1.5 hover:bg-white/10 rounded-xl transition-all"
+                className="p-1.5 cursor-pointer hover:bg-white/10 rounded-xl transition-all"
               >
                 <X size={18} />
               </button>
@@ -114,9 +125,7 @@ export default function ChatWidget() {
               {messages.length === 0 && (
                 <div className="h-full flex flex-col items-center justify-center text-stone-400 dark:text-slate-500 opacity-40 space-y-2">
                   <Sparkles size={24} />
-                  <p className="text-xs font-medium">
-                    Ask me about my AI projects!
-                  </p>
+                  <p className="text-xs font-medium">How can I help!</p>
                 </div>
               )}
 
@@ -131,21 +140,34 @@ export default function ChatWidget() {
                 >
                   <div
                     className={`
-                    max-w-[85%] px-4 py-2.5 rounded-2xl text-sm leading-relaxed shadow-lg backdrop-blur-xl
-                    ${
-                      m.role === "user"
-                        ? "bg-linear-to-r from-cyan-600 to-cyan-700 text-white rounded-tr-none border border-white/10"
-                        : "bg-stone-100/90 dark:bg-slate-800/90 text-stone-900 dark:text-white rounded-tl-none border border-stone-200 dark:border-slate-700 whitespace-pre-wrap"
-                    }
-                  `}
+        max-w-[85%] px-4 py-2.5 rounded-2xl text-sm leading-relaxed shadow-lg backdrop-blur-xl
+        ${
+          m.role === "user"
+            ? "bg-linear-to-r from-cyan-600 to-cyan-700 text-white rounded-tr-none border border-white/10"
+            : "bg-stone-100/90 dark:bg-slate-800/90 text-stone-900 dark:text-white rounded-tl-none border border-stone-200 dark:border-slate-700"
+        }
+      `}
                   >
-                    {m.content}
-                    {/* Pulsing Cursor - Only on the very last assistant message while streaming */}
-                    {m.role === "assistant" &&
-                      i === messages.length - 1 &&
-                      isStreaming && (
-                        <span className="inline-block w-1.5 h-4 ml-1 bg-cyan-500 animate-pulse align-middle" />
-                      )}
+                    {/* Container for content + cursor */}
+                    <span className="whitespace-pre-wrap break-words">
+                      {m.content}
+
+                      {/* Modern Cursor Integration */}
+                      {m.role === "assistant" &&
+                        i === messages.length - 1 &&
+                        isStreaming && (
+                          <motion.span
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: [0, 1, 0] }}
+                            transition={{
+                              duration: 0.8,
+                              repeat: Infinity,
+                              ease: "linear",
+                            }}
+                            className="inline-block w-[2px] h-[15px] ml-1 bg-cyan-500 dark:bg-cyan-400 vertical-middle shadow-[0_0_8px_rgba(6,182,212,0.5)]"
+                          />
+                        )}
+                    </span>
                   </div>
                 </motion.div>
               ))}
@@ -178,7 +200,7 @@ export default function ChatWidget() {
                 <button
                   onClick={sendMessage}
                   disabled={!input.trim() || loading || isStreaming}
-                  className="absolute right-1.5 p-2.5 bg-linear-to-r from-cyan-600 to-purple-600 text-white rounded-xl hover:opacity-90 transition-all active:scale-95 shadow-lg shadow-cyan-500/20"
+                  className=" cursor-pointer absolute right-1.5 p-2.5 bg-linear-to-r from-cyan-600 to-purple-600 text-white rounded-xl hover:opacity-90 transition-all active:scale-95 shadow-lg shadow-cyan-500/20"
                 >
                   <Send size={16} />
                 </button>
@@ -212,7 +234,7 @@ export default function ChatWidget() {
                 y: { duration: 3, repeat: Infinity, ease: "easeInOut" },
               }}
               onClick={() => setIsOpen(true)}
-              className="p-4 rounded-full bg-linear-to-r from-cyan-600 to-purple-600 text-white shadow-[0_10px_30px_rgba(8,145,178,0.3)] border border-white/20"
+              className="p-4 cursor-pointer rounded-full bg-linear-to-r from-cyan-600 to-purple-600 text-white shadow-[0_10px_30px_rgba(8,145,178,0.3)] border border-white/20"
             >
               <MessageCircle size={26} />
             </motion.button>
