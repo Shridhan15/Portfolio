@@ -8,8 +8,8 @@ const Hero = () => (
     className="relative min-h-[85vh] flex items-center justify-center pt-28 pb-12 overflow-hidden bg-stone-50 dark:bg-slate-950 transition-colors duration-300"
   >
     <div className="absolute top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
-      <div className="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] bg-purple-300/20 dark:bg-purple-600/10 rounded-full blur-[120px] animate-pulse"></div>
-      <div className="absolute bottom-[-10%] left-[-5%] w-[500px] h-[500px] bg-cyan-300/20 dark:bg-cyan-500/10 rounded-full blur-[120px] animate-pulse delay-700"></div>
+      <div className="absolute top-[-10%] right-[-5%] w-125 h-125 bg-purple-300/20 dark:bg-purple-600/10 rounded-full blur-[120px] animate-pulse"></div>
+      <div className="absolute bottom-[-10%] left-[-5%] w-125 h-125 bg-cyan-300/20 dark:bg-cyan-500/10 rounded-full blur-[120px] animate-pulse delay-700"></div>
     </div>
 
     <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
@@ -25,7 +25,7 @@ const Hero = () => (
 
           <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-stone-900 dark:text-white leading-tight font-space-grotesk mb-4 drop-shadow-sm dark:drop-shadow-xl transition-colors duration-300">
             Hi, I'm{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-purple-600 dark:from-cyan-400 dark:to-purple-500">
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-cyan-600 to-purple-600 dark:from-cyan-400 dark:to-purple-500">
               Shridhan
             </span>
           </h1>
@@ -54,11 +54,11 @@ const Hero = () => (
           <p>
             Currently, I focus on integrating Large Language Models (LLMs) into
             accessible web applications, ensuring that complex tech remains
-            user-friendly. When I'm not coding, I'm deep-diving into{" "}
+            user-friendly. When I'm not coding, I'm exploring{" "}
             <span className="text-cyan-600 dark:text-cyan-400 font-medium">
-              Rust
+              AI agents
             </span>{" "}
-            or exploring generative art.
+            and experimenting with generative art.
           </p>
         </div>
 
@@ -67,12 +67,12 @@ const Hero = () => (
             <a
               href={certificates_images.resume}
               target="_blank"
-              className="bg-gradient-to-r from-cyan-600 to-purple-600 dark:from-cyan-600 dark:to-blue-600 text-white px-6 py-3.5 font-medium flex items-center gap-2 hover:from-cyan-500 hover:to-purple-500 dark:hover:from-cyan-500 dark:hover:to-blue-500 transition-colors flex-1 justify-center sm:flex-none"
+              className="bg-linear-to-r from-cyan-600 to-purple-600 dark:from-cyan-600 dark:to-blue-600 text-white px-6 py-3.5 font-medium flex items-center gap-2 hover:from-cyan-500 hover:to-purple-500 dark:hover:from-cyan-500 dark:hover:to-blue-500 transition-colors flex-1 justify-center sm:flex-none"
             >
               <Eye size={20} /> View Resume
             </a>
 
-            <div className="w-[1px] bg-white/20"></div>
+            <div className="w-px bg-white/20"></div>
 
             <a
               href={certificates_images.resume}
@@ -127,16 +127,16 @@ const Hero = () => (
       </div>
 
       <div className="relative hidden lg:block w-full max-w-xs xl:max-w-sm mx-auto group">
-        <div className="absolute -inset-1 bg-gradient-to-tr from-cyan-500 to-purple-600 dark:from-cyan-400 dark:to-purple-600 rounded-2xl blur opacity-30 dark:opacity-20 group-hover:opacity-50 dark:group-hover:opacity-40 transition duration-500"></div>
+        <div className="absolute -inset-1 bg-linear-to-tr from-cyan-500 to-purple-600 dark:from-cyan-400 dark:to-purple-600 rounded-2xl blur opacity-30 dark:opacity-20 group-hover:opacity-50 dark:group-hover:opacity-40 transition duration-500"></div>
 
         <div className="relative rounded-2xl bg-white dark:bg-slate-800 border border-stone-100 dark:border-slate-700 p-2 transform group-hover:rotate-0 lg:rotate-3 transition-all duration-500 shadow-[0_8px_30px_rgb(0,0,0,0.12)] dark:shadow-none">
-          <div className="aspect-[4/5] bg-stone-50 dark:bg-slate-900 rounded-xl overflow-hidden relative">
+          <div className="aspect-4/5 bg-stone-50 dark:bg-slate-900 rounded-xl overflow-hidden relative">
             <img
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fit=crop&w=800&q=80"
+              src={certificates_images.my_img}
               alt="Shridhan Profile"
               className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-white/10 via-transparent to-transparent dark:from-slate-900 dark:via-transparent dark:to-transparent opacity-30 dark:opacity-40"></div>
+            <div className="absolute inset-0 bg-linear-to-t from-white/10 via-transparent to-transparent dark:from-slate-900 dark:via-transparent dark:to-transparent opacity-30 dark:opacity-40"></div>
           </div>
         </div>
 

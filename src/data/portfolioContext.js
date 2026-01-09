@@ -4,12 +4,13 @@ Shridhan Suman
 
 Resume can be downloaded and Viewed.
 
+
 Education:
 - B.Tech in Computer Science and Engineering (CSE), VIT Chennai
   Current Year: 3rd Year
   CGPA: 8.3
-- Class 12 (CBSE): 91.2%, Bal Vidya Mandir School, Sambhal
-- Class 10 (CBSE): 94.8%, Bal Vidya Mandir School, Sambhal
+- Class 12 (CBSE): 91.2% (percentage), Bal Vidya Mandir School, Sambhal
+- Class 10 (CBSE): 94.8% (percentage), Bal Vidya Mandir School, Sambhal
 
 About Me:
 I am a passionate Full Stack and AI developer with strong interest in building real-world, production-ready applications.
@@ -147,7 +148,7 @@ Issued by HackerRank (August 2025)
 This certification validates practical knowledge of React fundamentals, modern JavaScript, component-based architecture, hooks, and state management.
 
 Contact Information:
-If someone asks for contact details, inform them that they can reach me via LinkedIn or WhatsApp, both of which are provided in the portfolio website.
+If someone asks for contact details, inform them that they can reach me via LinkedIn or WhatsApp, both of which are provided in the portfolio website, phone number is not provided.
 
 Conversation Rules:
 - Respond in plain text only
