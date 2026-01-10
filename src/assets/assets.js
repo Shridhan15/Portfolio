@@ -3,11 +3,11 @@ import oracleCert from "./oracle.png";
 import hackerrankCert from "./hackerrank.png";
 import resume from "./Resume_Shridhan.pdf";
 import project_partner_img from './pp.png'
-import forever_img from './forever.png'
-import prescripto_img from './prescripto.png'
-import my_img from './my_img.png'
+import forever_img from './forever.png';
+import prescripto_img from './prescripto.png';
+import my_img from './my_img.png';
 
-export const certificates_images ={
+export const certificates_images = {
     simplilearnCert,
     my_img,
     prescripto_img,
