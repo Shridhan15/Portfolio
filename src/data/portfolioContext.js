@@ -3,6 +3,7 @@ Name:
 Shridhan Suman
 
 Resume can be downloaded and Viewed.
+I am available to hire.
 
 
 Education:
