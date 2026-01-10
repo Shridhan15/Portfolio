@@ -7,7 +7,7 @@ import { fileURLToPath } from "url";
 
 dotenv.config();
 
-// 1. Configure __dirname for ES Modules (since you are using "type": "module")
+// 1. Configure __dirname for ES Modules
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -15,7 +15,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// 2. Serve Static Files from the "dist" folder (located one level up)
+// 2. Serve Static Files from the "dist" folder
 app.use(express.static(path.join(__dirname, "../dist")));
 
 // API Route
@@ -40,10 +40,9 @@ app.post("/api/chat", async (req, res) => {
     }
 });
 
-// 3. The "Catch-All" Route
-// This ensures that if a user goes to /about or refreshes the page,
-// the server sends index.html so React Router can take over.
-app.get("*", (req, res) => {
+// 3. The "Catch-All" Route (Fixed for Express 5)
+// We changed "*" to "(.*)"
+app.get("(.*)", (req, res) => {
     res.sendFile(path.join(__dirname, "../dist/index.html"));
 });
 
