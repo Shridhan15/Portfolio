@@ -42,7 +42,7 @@ app.post("/api/chat", async (req, res) => {
 
 // 3. The "Catch-All" Route (Fixed for Express 5)
 // We changed "*" to "(.*)"
-app.get("(.*)", (req, res) => {
+app.get(/.*/, (req, res) => {
     res.sendFile(path.join(__dirname, "../dist/index.html"));
 });
 
