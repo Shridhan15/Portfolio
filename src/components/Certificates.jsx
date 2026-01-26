@@ -3,6 +3,29 @@ import { certificates_images } from "../assets/assets";
 
 const CERTIFICATES = [
   {
+    title: "Complete Generative AI Course: RAG, AI Agents & Deployment",
+    issuer: "Udemy",
+    issueDate: "January 2026",
+    certId: "",
+    description:
+      "Hands on course covering Generative AI fundamentals including Large Language Models, Transformer architecture, and real-world application development. Built practical projects like GenAI chatbots with Streamlit UI, RAG based PDF question answering systems, AI agents using CrewAI, and learned deployment using Docker, Ollama and AWS EC2.",
+    skills: [
+      "Generative AI",
+      "LLMs",
+      "Prompt Engineering",
+      "RAG",
+      "AI Agents",
+      "CrewAI",
+      "MCP",
+      "Streamlit",
+      "Docker",
+      "Ollama",
+      "AWS EC2",
+    ],
+    image: certificates_images.GenAI,
+    verifyLink: "https://www.udemy.com/certificate/UC-0024f323-7365-40e6-94da-f363f90fa873/",
+  },
+  {
     title:
       "Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate",
     issuer: "Oracle University",

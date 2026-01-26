@@ -1,6 +1,6 @@
 import dotenv from "dotenv";
 dotenv.config();
-
+console.log("GROQ_API_KEY =", process.env.GROQ_API_KEY);
 import { streamText } from "ai";
 import { groq } from "@ai-sdk/groq";
 import { portfolioContext } from "../src/data/portfolioContext.js";

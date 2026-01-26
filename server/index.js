@@ -14,8 +14,7 @@ const __dirname = path.dirname(__filename);
 const app = express();
 app.use(cors());
 app.use(express.json());
-
-// 2. Serve Static Files from the "dist" folder
+ 
 app.use(express.static(path.join(__dirname, "../dist")));
 
 // API Route
@@ -39,9 +38,7 @@ app.post("/api/chat", async (req, res) => {
         res.status(500).json({ error: "Internal Server Error" });
     }
 });
-
-// 3. The "Catch-All" Route (Fixed for Express 5)
-// We changed "*" to "(.*)"
+ 
 app.get(/.*/, (req, res) => {
     res.sendFile(path.join(__dirname, "../dist/index.html"));
 });
