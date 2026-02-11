@@ -130,23 +130,26 @@ Tools and Platforms:
 
 Certifications:
 
-1. Generative AI (RAG, AI Agents & Deployment) – Udemy
+1. Applied AI Internship – IBM SkillsBuild & AICTE (CSRBOX)
+Completed a 6-week applied Artificial Intelligence internship focused on practical and real-world AI applications. Learned key concepts like prompt engineering, introduction to agentic AI, chatbot development, and ethics in generative AI. Worked on understanding how AI solutions are designed, built, and applied to solve real problems. This experience strengthened my foundation in applied AI and improved my ability to think about responsible and practical AI implementation.
+ 
+2. Generative AI (RAG, AI Agents & Deployment) – Udemy
 Completed a hands-on Generative AI course covering LLMs, Transformer basics, and prompt engineering. Built real projects like Streamlit chatbots, a RAG-based PDF question answering system, and AI agents using CrewAI. This helped me understand how GenAI apps work end-to-end and how to apply them in real-world use cases.
 
-2. Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate
+3. Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate
 Issued by Oracle
 Expiration Date: November 03, 2027
 
 This certification covers fundamental concepts of AI and ML with practical exposure to Oracle Cloud Infrastructure AI services.
 It includes understanding machine learning, deep learning basics, generative AI, large language models, and OCI AI solutions.
 
-3. Full Stack Web Development Certification
+4. Full Stack Web Development Certification
 Issued by Simplilearn (September 2025)
 
 This certification focused on building scalable, secure, and production-ready web applications.
 Topics included frontend development, backend systems, databases, REST APIs, and cloud fundamentals.
 
-4. React (Frontend Developer) Skills Test
+5. React (Frontend Developer) Skills Test
 Issued by HackerRank (August 2025)
 
 This certification validates practical knowledge of React fundamentals, modern JavaScript, component-based architecture, hooks, and state management.

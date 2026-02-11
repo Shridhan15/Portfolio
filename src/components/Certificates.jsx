@@ -3,6 +3,28 @@ import { certificates_images } from "../assets/assets";
 
 const CERTIFICATES = [
   {
+    title:
+      "Applied AI Internship – Learn, Design, and Build with Artificial Intelligence",
+    issuer: "IBM SkillsBuild & AICTE (CSRBOX)",
+    issueDate: "January 2026",
+    certId: "202526AICTECSRBOXAI491",
+    description:
+      "Completed a 6-week applied AI internship focused on practical understanding and real-world implementation of Artificial Intelligence. Covered key concepts such as Prompt Engineering, Introduction to Agentic AI, Chatbot development, and Ethics in Generative AI, along with exposure to designing AI-driven solutions.",
+    skills: [
+      "Artificial Intelligence",
+      "Generative AI",
+      "Prompt Engineering",
+      "Agentic AI",
+      "Chatbot Development",
+      "AI Ethics",
+      "Applied AI",
+      "Problem Solving",
+    ],
+    image: certificates_images.ibm,
+    has_verify: false,
+    verifyLink: "",
+  },
+  {
     title: "Complete Generative AI Course: RAG, AI Agents & Deployment",
     issuer: "Udemy",
     issueDate: "January 2026",
@@ -23,7 +45,9 @@ const CERTIFICATES = [
       "AWS EC2",
     ],
     image: certificates_images.GenAI,
-    verifyLink: "https://www.udemy.com/certificate/UC-0024f323-7365-40e6-94da-f363f90fa873/",
+    has_verify: true,
+    verifyLink:
+      "https://www.udemy.com/certificate/UC-0024f323-7365-40e6-94da-f363f90fa873/",
   },
   {
     title:
@@ -44,6 +68,7 @@ const CERTIFICATES = [
       "Select AI",
     ],
     image: certificates_images.oracleCert,
+    has_verify: true,
     verifyLink:
       "https://catalog-education.oracle.com/ords/certview/sharebadge?id=7312D02291904CFD13E6F4256CB6EBFE4CCD0BCFB4C89ACAA77FAEAEA1E661E9",
   },
@@ -67,6 +92,7 @@ const CERTIFICATES = [
       "Cloud Fundamentals",
     ],
     image: certificates_images.simplilearnCert,
+    has_verify: true,
     verifyLink: "https://lnkd.in/geuF_53d",
   },
   {
@@ -86,6 +112,7 @@ const CERTIFICATES = [
       "Best Practices",
     ],
     image: certificates_images.hackerrankCert,
+    has_verify: true,
     verifyLink: "https://www.hackerrank.com/certificates/44f28e1a14e8",
   },
 ];
@@ -178,12 +205,14 @@ const Certificates = ({ isDark }) => {
                   >
                     <Eye size={16} /> Preview
                   </button>
-                  <a
-                    href={cert.verifyLink}
-                    className="flex items-center justify-center gap-2 py-2.5 rounded-lg bg-cyan-50 dark:bg-cyan-900/10 text-cyan-600 dark:text-cyan-400 border border-cyan-200 dark:border-cyan-900/30 text-sm font-medium hover:bg-cyan-100 dark:hover:bg-cyan-900/20 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"
-                  >
-                    Verify <ArrowUpRight size={16} />
-                  </a>
+                  {cert.has_verify && (
+                    <a
+                      href={cert.verifyLink}
+                      className="flex items-center justify-center gap-2 py-2.5 rounded-lg bg-cyan-50 dark:bg-cyan-900/10 text-cyan-600 dark:text-cyan-400 border border-cyan-200 dark:border-cyan-900/30 text-sm font-medium hover:bg-cyan-100 dark:hover:bg-cyan-900/20 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"
+                    >
+                      Verify <ArrowUpRight size={16} />
+                    </a>
+                  )}
                 </div>
               </div>
             </div>

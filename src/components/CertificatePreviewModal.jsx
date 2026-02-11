@@ -28,7 +28,7 @@ const CertificatePreviewModal = ({ certificate, onClose }) => {
             {/* Certificate Image */}
             <div className="w-full md:w-80 lg:w-96 flex-shrink-0">
               <div
-                className="rounded-2xl border border-stone-200/70 dark:border-slate-600 
+                className="rounded-2xl no-scrollbar max-h-[70vh] overflow-auto border border-stone-200/70 dark:border-slate-600 
   bg-white/90 dark:bg-slate-800/80 p-4 shadow-lg"
               >
                 <img
@@ -70,14 +70,16 @@ const CertificatePreviewModal = ({ certificate, onClose }) => {
 
           {/* Actions */}
           <div className="flex justify-end gap-3 pt-4">
-            <a
-              href={certificate.verifyLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-gradient-to-r from-cyan-600 to-purple-600 text-white font-medium hover:shadow-lg hover:shadow-cyan-500/30 transition"
-            >
-              Verify Certificate <ExternalLink size={16} />
-            </a>
+            {certificate.has_verify && (
+              <a
+                href={certificate.verifyLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-gradient-to-r from-cyan-600 to-purple-600 text-white font-medium hover:shadow-lg hover:shadow-cyan-500/30 transition"
+              >
+                Verify Certificate <ExternalLink size={16} />
+              </a>
+            )}
 
             <button
               onClick={onClose}
