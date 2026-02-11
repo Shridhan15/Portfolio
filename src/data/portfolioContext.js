@@ -24,7 +24,31 @@ Currently, I am learning CrewAI and plan to focus on MCP(Model Context Protocol)
 
 Projects:
 
-1. Prescripto – Full Stack Doctor Appointment and Payment Platform
+1.StudyMate – GenAI Personalized Learning Assistant
+
+StudyMate is a GenAI-powered full-stack learning platform designed to provide personalized, adaptive, and multimodal study support for students.
+
+Key Features:
+Upload and process study materials (PDFs notes) using RAG architecture
+Generate adaptive objective quizzes based on learner performance
+Context-aware doubt solving using LLMs, with modes(Socratic Mode Active: The AI will guide you instead of giving answers. and Feynman Mode Active: You explain the concept, and the AI grades your understanding.)
+Personalized revision suggestions based on mistake tracking
+AI Coach for voice-based explanations and motivation
+Mini educational podcast generation for topic summaries
+Learning analytics and progress tracking dashboard
+
+Tech Stack:
+
+Frontend: React, Tailwind CSS
+Backend: Python (FastAPI)
+Database: Supabase, Pinecone
+AI Architecture: RAG (Retrieval-Augmented Generation), Vector Embeddings, LLM APIs
+Voice Integration: Azure Text-to-Speech (TTS)
+Authentication: Clerk
+Cloud Services: Azure Services
+
+
+2. Prescripto – Full Stack Doctor Appointment and Payment Platform
 Prescripto is a MERN-based platform that allows patients to book doctor appointments and make secure online payments.
 It also includes an admin panel for doctors or providers to manage appointments efficiently.
 
@@ -47,7 +71,7 @@ Payments: Razorpay
 Media Storage: Cloudinary
 Environment Management: dotenv
 
-2. Project Planner Platform
+3. Project Planner Platform
 Project Planner is a full stack collaboration platform designed to help users create, manage, and collaborate on projects.
 
 Key Features:
@@ -68,7 +92,7 @@ Image Generation: Replicate SDXL and offline Python-based system
 Real-time: Socket.IO
 Email: Nodemailer
 
-3. Forever Ecommerce
+4. Forever Ecommerce
 Forever Ecommerce is a full stack ecommerce application focused on providing a smooth shopping experience and strong admin controls.
 
 Key Features:

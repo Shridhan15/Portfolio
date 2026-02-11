@@ -5,10 +5,29 @@ import { certificates_images } from "../assets/assets";
 
 const PROJECTS = [
   {
+    title: "StudyMate",
+    description:
+      "A GenAI-powered smart Learning Assistant using RAG to generate adaptive quizzes, smart teaching and deliver multimodal learning through an AI Coach and  educational podcasts.",
+    tech: [
+      "Python",
+      "FastAPI",
+      "React",
+      "Supabase",
+      "Vector Embeddings",
+      "Azure TTS",
+      "LLM APIs",
+      "Clerk"
+    ],
+    image: certificates_images.studymate,
+    liveLink: "https://learning-assistant-ten.vercel.app/",
+    githubLink: "https://github.com/Shridhan15/Learning-Assistant",
+  },
+  ,
+  {
     title: "Prescripto",
     description:
       "A MERN-based platform for booking doctor appointments with secure online payments and admin-managed scheduling.",
-    tech: ["React", "NodeJs", "Express", "MongoDB","TailwindCSS","Razorpay"],
+    tech: ["React", "NodeJs", "Express", "MongoDB", "TailwindCSS", "Razorpay"],
     image: certificates_images.prescripto_img,
     liveLink: "https://prescripto-frontend-29f1.onrender.com/",
     githubLink: "https://github.com/Shridhan15/Prescripto",
@@ -18,21 +37,28 @@ const PROJECTS = [
     title: "Forever- eCommerce",
     description:
       "A full-stack ecommerce application with product management, cart functionality, and admin-controlled order handling.",
-    tech: ["React", "MongoDB", "NodeJs", "Express","Stripe"],
+    tech: ["React", "MongoDB", "NodeJs", "Express", "Stripe"],
     image: certificates_images.forever_img,
     liveLink: "https://forever-frontend-rho-green.vercel.app/",
     githubLink: "https://github.com/Shridhan15/Forever-Ecommerce-",
   },
-    {
+  {
     title: "Project Planner",
     description:
       "A full-stack collaboration platform for creating projects, managing join requests, and real-time team communication.",
-    tech: ["React","Web Sockets", "Cloudinary", "NodeJs", "Express", "MongoDB", "TailwindCSS"],
+    tech: [
+      "React",
+      "Web Sockets",
+      "Cloudinary",
+      "NodeJs",
+      "Express",
+      "MongoDB",
+      "TailwindCSS",
+    ],
     image: certificates_images.project_partner_img,
     liveLink: "https://project-planner-client-ky9j.onrender.com/",
     githubLink: "https://github.com/Shridhan15/Project-Planner",
   },
-  
 ];
 
 const Projects = ({ isDark }) => (

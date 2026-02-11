@@ -7,6 +7,7 @@ import forever_img from './forever.png';
 import prescripto_img from './prescripto.png';
 import GenAI from './GenAI.png';
 import ibm from './ibm.png';
+import studymate from './studymate.png';
 import my_img from './my_img.png';
 
 export const certificates_images = {
@@ -20,5 +21,6 @@ export const certificates_images = {
     resume,
     GenAI,
     ibm,
+    studymate,
 }
 
