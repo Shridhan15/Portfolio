@@ -26,6 +26,18 @@ const SKILLS = {
       name: "OpenCV",
       src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg",
     },
+    {
+      name: "FastAPI",
+      src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg",
+    },
+    {
+      name: "LangChain",
+      src: "https://raw.githubusercontent.com/lobehub/lobe-icons/refs/heads/master/packages/static-png/dark/langchain-color.png",
+    },
+    {
+      name: "CrewAI",
+      src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5C5BjOZHtL73199G9LDYJKP78utUWRxc0hQ&s",
+    },
   ],
   "Full Stack": [
     {
@@ -101,7 +113,6 @@ const SKILLS = {
       src: "https://cdn.simpleicons.org/render/000000",
       darkSrc: "https://cdn.simpleicons.org/render/white",
     },
-    { name: "Stripe", src: "https://cdn.simpleicons.org/stripe/635BFF" },
   ],
 };
 import { Wrench, Brain, Layers, Globe, Network } from "lucide-react";
@@ -227,7 +238,7 @@ const Skills = ({ isDark }) => (
                         <span
                           className={`text-[10px] text-stone-600 dark:text-slate-400 group-hover/skill:${titleColor.replace(
                             "text-",
-                            ""
+                            "",
                           )} font-medium text-center leading-tight`}
                         >
                           {skill.name}

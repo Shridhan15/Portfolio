@@ -127,6 +127,9 @@ AI and Machine Learning:
 - Scikit-learn
 - Matplotlib
 - OpenCV
+- FastAPI
+- LangChain
+- CrewAI
 
 Full Stack Development:
 - React
@@ -149,7 +152,6 @@ Tools and Platforms:
 - Razorpay
 - Vercel
 - Render
-- Stripe
 - Composio
 
 Certifications:
