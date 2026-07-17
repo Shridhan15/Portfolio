@@ -9,7 +9,7 @@ const EDUCATION = [
     details: [
       { label: "Degree", value: "B.Tech" },
       { label: "Branch", value: "Computer Science" },
-      { label: "CGPA", value: "8.3" },
+      { label: "CGPA", value: "8.4" },
     ],
     icon: <GraduationCap size={24} />,
     color: "text-violet-600 dark:text-purple-400",

@@ -9,6 +9,7 @@ import GenAI from './GenAI.png';
 import ibm from './ibm.png';
 import studymate from './studymate.png';
 import my_img from './my_img.png';
+import IBM_GenAI_prof from './IBM_GenAI_prof.png';
 
 export const certificates_images = {
     simplilearnCert,
@@ -22,5 +23,6 @@ export const certificates_images = {
     GenAI,
     ibm,
     studymate,
+    IBM_GenAI_prof
 }
 

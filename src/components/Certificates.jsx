@@ -3,15 +3,37 @@ import { certificates_images } from "../assets/assets";
 
 const CERTIFICATES = [
   {
+    title: "IBM Generative AI Professional Certificate",
+    issuer: "IBM Career Education Program",
+    issueDate: "July 2026",
+    certId: "2097dd6c91bd4e47807c3c655a038b75",
+    description:
+      "Successfully completed IBM's Generative AI Professional Certificate and passed the final proctored assessment. Gained practical knowledge of Foundation Models, LLMs, Prompt Engineering, IBM Granite and enterprise AI applications. Also explored the Hugging Face ecosystem, Machine Learning fundamentals, IBM Cognos Analytics, and DataRobot for AI-driven data analysis and business solutions.",
+    skills: [
+      "GenAI",
+      "Data Analytics",
+      "DataRobot",
+      "Foundation Models",
+      "Hugging Face",
+      "Prompt Engineering",
+      "Responsible AI",
+      "IBM Cognos Analytics",
+      "Enterprise AI",
+    ],
+    image: certificates_images.IBM_GenAI_prof,
+    has_verify: true,
+    verifyLink:
+      "https://courses.ibmcep.cognitiveclass.ai/certificates/2097dd6c91bd4e47807c3c655a038b75",
+  },
+  {
     title:
       "Applied AI Internship – Learn, Design, and Build with Artificial Intelligence",
     issuer: "IBM SkillsBuild & AICTE (CSRBOX)",
     issueDate: "January 2026",
     certId: "202526AICTECSRBOXAI491",
     description:
-      "Completed a 6-week applied AI internship focused on practical understanding and real-world implementation of Artificial Intelligence. Covered key concepts such as Prompt Engineering, Introduction to Agentic AI, Chatbot development, and Ethics in Generative AI, along with exposure to designing AI-driven solutions.",
+      "Completed a 6-week applied AI internship focused on practical understanding and real-world implementation of AI. Covered key concepts such as Prompt Engineering, Introduction to Agentic AI, Chatbot development, and Ethics in Generative AI, along with exposure to designing AI-driven solutions.",
     skills: [
-      "Artificial Intelligence",
       "Generative AI",
       "Prompt Engineering",
       "Agentic AI",
@@ -58,7 +80,7 @@ const CERTIFICATES = [
     description:
       "Certification focused on foundational concepts of AI and GenAI, covering machine learning principles, deep learning architectures, large language models, and Oracle Cloud Infrastructure AI services. The program emphasizes understanding AI workflows and applying OCI AI, ML, and Generative AI services in real-world cloud environments.",
     skills: [
-      "Artificial Intelligence Fundamentals",
+      "AI Fundamentals",
       "Generative AI",
       "Machine Learning",
       "Supervised Learning",
@@ -208,6 +230,7 @@ const Certificates = ({ isDark }) => {
                   {cert.has_verify && (
                     <a
                       href={cert.verifyLink}
+                      target="_blank"
                       className="flex items-center justify-center gap-2 py-2.5 rounded-lg bg-cyan-50 dark:bg-cyan-900/10 text-cyan-600 dark:text-cyan-400 border border-cyan-200 dark:border-cyan-900/30 text-sm font-medium hover:bg-cyan-100 dark:hover:bg-cyan-900/20 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"
                     >
                       Verify <ArrowUpRight size={16} />
