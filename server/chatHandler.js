@@ -7,7 +7,7 @@ import { portfolioContext } from "../src/data/portfolioContext.js";
 
 export async function chatHandler(messages) {
     return streamText({
-        model: groq("llama-3.1-8b-instant"),
+        model: groq("openai/gpt-oss-20b"),
         system: `
 You are a professional portfolio chatbot on a personal website.
 
