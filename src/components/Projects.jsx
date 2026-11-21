@@ -16,11 +16,28 @@ const PROJECTS = [
       "Vector Embeddings",
       "Azure TTS",
       "LLM APIs",
-      "Clerk"
+      "Clerk",
     ],
     image: certificates_images.studymate,
     liveLink: "https://learning-assistant-ten.vercel.app/",
     githubLink: "https://github.com/Shridhan15/Learning-Assistant",
+  },
+  {
+    title: "FlameGuard SI",
+    description:
+      "An agentic RAG platform for NASA microgravity combustion research and aerospace fire safety analysis across historic missions and PSI datasets.",
+    tech: [
+      "React",
+      "FastAPI",
+      "LangGraph",
+      "Pinecone",
+      "Groq",
+      "PyMuPDF",
+      "TailwindCSS",
+    ],
+    image: certificates_images.flameguard_img,
+    liveLink: "https://nasa-hackathon-flameguard.vercel.app/",
+    githubLink: "https://github.com/Shridhan15/NASA-Hackathon-flameguard",
   },
   ,
   {
